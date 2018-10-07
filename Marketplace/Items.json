@@ -1,0 +1,30 @@
+{
+    "0":{
+        "ItemName": "Swarley Sword",
+        "ItemPrice": 100000,
+        "ItemDesc": "They say it was forged with developers blood",
+        "ItemImgURL": "",
+        "ItemID": "0"
+    },
+    "1":{
+        "ItemName": "Viribus Sword",
+        "ItemPrice": 5000,
+        "ItemDesc": "Strenght is somewhere in us all",
+        "ItemImgURL": "",
+        "ItemID": "1"
+    },
+    "2":{
+        "ItemName": "Dominus Viribus",
+        "ItemPrice": 7500,
+        "ItemDesc": "The Dark one has nothing on thou",
+        "ItemImgURL": "",
+        "ItemID": "2"
+    },
+    "3":{
+        "ItemName": "Jack O Lantern",
+        "ItemPrice": 10,
+        "ItemDesc": "Its Halloween!",
+        "ItemImgURL": "",
+        "ItemID": "2"
+    }
+}
