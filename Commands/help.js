@@ -12,7 +12,7 @@ exports.run = (client, message, args, ops, eEmb) => {
         } else if (args[0] == "general") {
             const general = new Discord.RichEmbed()
             .setTitle("Viribus Help | General")
-            .setDescription("`stats, urban`")
+            .setDescription("`urban, searchuser`")
             .setColor(ops.embColor)
             message.channel.send(general)
         } else if (args[0] == "fun") {
