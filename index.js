@@ -16,7 +16,7 @@ function write(type) {
 client.login(process.env.vibTK);
 
 client.on('ready', () => {
-
+    client.user.setActivity(`on ${client.guilds.size} guilds | vir!help`)
 })
 
 client.on('guildMemberAdd', member => {
