@@ -1,2 +1,2 @@
 worker: npm start
-web: npm webst
+web: npm restart
