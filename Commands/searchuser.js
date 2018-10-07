@@ -8,13 +8,21 @@ exports.run = (client, message, args, ops, eEmb) => {
         if(!searchTerm) return message.channel.send("Please supply valid paramaters!")
         
         let matches = users.filter(u => u.tag.toLowerCase().includes(searchTerm.toLowerCase()));
-
-        var emb = new Discord.RichEmbed()
-        .setTitle("Possible Users:")
-        .setDescription(matches.map(u => u.tag).join("\n"))
-        .setColor(ops.embColor)
-        .setFooter("Note: This is across all guilds this bot is in!")
-        message.channel.send(emb)
+        var matchF = matches.map(u => u.tag).join("\n")
+        if(matchF == null) {
+            var emb = new Discord.RichEmbed()
+            .setTitle("No Users Found!")
+            .setColor(ops.embColor)
+            .setFooter("Note: This is across all guilds this bot is in!")
+            message.channel.send(emb)   
+        } else {
+            var emb = new Discord.RichEmbed()
+            .setTitle("Users:")
+            .setDescription(matchF)
+            .setColor(ops.embColor)
+            .setFooter("Note: This is across all guilds this bot is in!")
+            message.channel.send(emb)   
+        }
 
     } catch(e) {
         eEmb(e)
