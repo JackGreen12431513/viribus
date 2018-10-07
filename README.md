@@ -1,2 +1,2 @@
-# viribus
-This is the viribus bot project page.
+# Viribus
+This is the Viribus bot project page.
