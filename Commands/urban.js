@@ -3,6 +3,8 @@ exports.run = async (client, message, args, ops, eEmb) => {
         const Discord = require("discord.js");
         const snek = require("snekfetch");
 
+        if(!message.channel.nsfw)return message.channel.send("🚫 Please use this command in a NSFW channel!")
+
         if(!args) {
           return message.reply("Give me something to search!");
         }
