@@ -5,7 +5,7 @@ exports.run = (client, message, args, ops, eEmb, userData, write) => {
         if(message.author.id !== ops.ownerID) return message.channel.send("🚫 Sorry, you can not use this command!")
     
         try {
-                const hat = JSON.parse(fs.readFileSync('./Marketplace/Items.json', 'utf8'))
+                const hat = JSON.parse(fs.readFileSync('./Data/Items.json', 'utf8'))
                 var catalogItems = [];
                 const values = Object.values(hat)
             
@@ -19,19 +19,23 @@ exports.run = (client, message, args, ops, eEmb, userData, write) => {
                         var itemEmb = new Discord.RichEmbed()
                         .setAuthor("NEW ITEM RELEASED!")
                         .setTitle(`${randomValue.ItemName}`)
-                        .addField(`Info`, `Description: ${randomValue.ItemDesc}\nPrice: V$${randomValue.ItemPrice}`)
+                        .addField(`Info`, `Description: ${randomValue.ItemDesc}\nPrice: V$${randomValue.ItemPrice}\nFor Sale: ${randomValue.itemFS}`)
                         .setThumbnail(randomValue.ItemImgURL)
                         .setFooter('React with 💵 to buy!')
                         message.channel.send(itemEmb)
                         client.on('messageReactionAdd', (reaction, user) => {
                             if(reaction.emoji.name === "💵") {
-                                if (userData[user.id].coins >= randomValue.ItemPrice) {
-                                    userData[user.id].coins -= randomValue.ItemPrice;
-                                    userData[user.id].ItemsOwned[randomValue.ItemName.replace(/ /g,'')] += 1;
-                                    userData[user.id].userValue += randomValue.ItemPrice;
-                                    write(1)
+                                if(randomValue.itemFS) {
+                                    if (userData[user.id].coins >= randomValue.ItemPrice) {
+                                        userData[user.id].coins -= randomValue.ItemPrice;
+                                        userData[user.id].ItemsOwned[randomValue.ItemName.replace(/ /g,'')] += 1;
+                                        userData[user.id].userValue += randomValue.ItemPrice;
+                                        write(1)
+                                    } else {
+                
+                                    }
                                 } else {
-            
+                                    message.channel.send("🚫 Unable to buy this item!")
                                 }
                             }
                         });

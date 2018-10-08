@@ -1,0 +1,44 @@
+{
+    "0":{
+        "jTitle": "Unemployed",
+        "jOwner": "",
+        "jCompany": "",
+        "jPay": [0, 0, 10, 0, 0],
+        "jID": "0"
+    },
+    "1":{
+        "jTitle": "Developer",
+        "jOwner": "Swarley",
+        "jCompany": "DiNo Development",
+        "jPay": [250, 100, 250, 1000, 500, 100, 250, 500, 666, 1337, 736, 484, 237, 276, 372, 276],
+        "jID": "1"
+    },
+    "2":{
+        "jTitle": "Street Sweeper",
+        "jOwner": "Swarley",
+        "jCompany": "Sweep & Co",
+        "jPay": [250, 100, 250, 500, 100, 250, 500],
+        "jID": "2"
+    },
+    "3":{
+        "jTitle": "Shop Keeper",
+        "jOwner": "Swarley",
+        "jCompany": "Testco",
+        "jPay": [250, 100, 250, 500, 100, 250, 500],
+        "jID": "3"
+    },
+    "4":{
+        "jTitle": "Teacher",
+        "jOwner": "Swarley",
+        "jCompany": "Teachers Inc",
+        "jPay": [250, 100, 250, 500, 100, 250, 500, 1000],
+        "jID": "4" 
+    },
+    "5":{
+        "jTitle": "Entertainer",
+        "jOwner": "Swarley",
+        "jCompany": "Entertain Us!",
+        "jPay": [250, 100, 250, 500, 100, 250, 500, 1000, 1000, 2500],
+        "jID": "5" 
+    }
+}

@@ -4,27 +4,39 @@
         "ItemPrice": 100000,
         "ItemDesc": "They say it was forged with developers blood",
         "ItemImgURL": "",
-        "ItemID": "0"
+        "ItemID": "0",
+        "ItemFS": true
     },
     "1":{
         "ItemName": "Viribus Sword",
         "ItemPrice": 5000,
         "ItemDesc": "Strenght is somewhere in us all",
         "ItemImgURL": "",
-        "ItemID": "1"
+        "ItemID": "1",
+        "ItemFS": true
     },
     "2":{
         "ItemName": "Dominus Viribus",
         "ItemPrice": 7500,
         "ItemDesc": "The Dark one has nothing on thou",
         "ItemImgURL": "",
-        "ItemID": "2"
+        "ItemID": "2",
+        "ItemFS": true
     },
     "3":{
         "ItemName": "Jack O Lantern",
         "ItemPrice": 10,
         "ItemDesc": "Its Halloween!",
         "ItemImgURL": "",
-        "ItemID": "3"
+        "ItemID": "3",
+        "ItemFS": true
+    },
+    "4":{
+        "ItemName": "Viribus Cap",
+        "ItemPrice": 0,
+        "ItemDesc": "Only for the best!!",
+        "ItemImgURL": "",
+        "ItemID": "4",
+        "ItemFS": false
     }
 }

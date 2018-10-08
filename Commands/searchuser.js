@@ -9,7 +9,7 @@ exports.run = (client, message, args, ops, eEmb) => {
         
         let matches = users.filter(u => u.tag.toLowerCase().includes(searchTerm.toLowerCase()));
         var matchF = matches.map(u => u.tag).join("\n")
-        if(matchF == null) {
+        if(matchF == "") {
             var emb = new Discord.RichEmbed()
             .setTitle("No Users Found!")
             .setColor(ops.embColor)

@@ -5,8 +5,6 @@ const fs = require('fs');
 
 const userData = JSON.parse(fs.readFileSync('./Data/userData.json', 'utf8'))
 
-const prefix = "vir!"
-
 function write(type) {
     if(type === 1) {
         fs.writeFileSync('./Data/userData.json', JSON.stringify(userData))
@@ -17,17 +15,19 @@ client.login(process.env.vibTK);
 
 client.on('ready', () => {
     client.user.setActivity(`on ${client.guilds.size} guilds | vir!help`)
-})
-
-client.on('guildMemberAdd', member => {
-    
-})
 
 client.on('message', message => {
+    const prefix = "vir!"
 
     if(!userData[message.author.id]) userData[message.author.id] = {
         realName: message.author.username,
         coins: 0,
+        customJob: false,
+        jobInfo: {
+            jobID: "0",
+            ownsJob: false
+        },
+        wins: 0,
         pickaxe: "Rusty Pickaxe",
         emojis: 0,
         timeoutDuration: 10000,
@@ -37,7 +37,8 @@ client.on('message', message => {
             SwarleySword: 0,
             ViribusSwords: 0,
             DominusViribus: 0,
-            JackOLantern: 0
+            JackOLantern: 0,
+            ViribusCap: 0
         }
     }
     
@@ -89,3 +90,4 @@ setInterval(function() {
     http.get("http://viribusdiscordbot.herokuapp.com");
     console.log("Pinged!")
 }, 300000); // every 5 minutes (300000)
+})
