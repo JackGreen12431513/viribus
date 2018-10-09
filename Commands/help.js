@@ -7,13 +7,13 @@ exports.run = (client, message, args, ops, eEmb) => {
             .setAuthor("Viribus Help")
             .addField("📰 General:", "`vir!help general`", true)
             .addField("🎪 Fun", "`vir!help fun`", true)
-            .addField("🎲 Gambling", "vir!help gambling", true)
+            .addField("🎲 Gambling", "`vir!help gambling`", true)
             .setColor(ops.embColor)
             message.channel.send(normal)
         } else if (args[0] == "general") {
             const general = new Discord.RichEmbed()
             .setTitle("Viribus Help | General")
-            .setDescription("`urban, searchuser`")
+            .setDescription("`urban, searchuser, buyViridian`")
             .setColor(ops.embColor)
             message.channel.send(general)
         } else if (args[0] == "fun") {
@@ -28,7 +28,7 @@ exports.run = (client, message, args, ops, eEmb) => {
             .setDescription("`coinflip`")
             .setFooter("Usage: `vir!gamble *game*`")
             .setColor(ops.embColor)
-            message.channel.send(fun)
+            message.channel.send(gambling)
         }
     } catch(e) {
         eEmb(e)
