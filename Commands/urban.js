@@ -20,7 +20,7 @@ exports.run = async (client, message, args, ops, eEmb) => {
           const thumbdown = res.body.list[0].thumbs_down;
           const embed = new Discord.RichEmbed()
           .setColor(ops.embColor)
-          .setTitle(`Info for: **${word}**`)
+          .setTitle(`Info for: ${word}`)
           .addField("Definition:", `${def}`)
           .addField("Author:", `${author}`)
           .addField("Ratings", `:thumbsup: ${thumbup} :thumbsdown: ${thumbdown}`, true)

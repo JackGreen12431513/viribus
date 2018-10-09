@@ -1,3 +1,3 @@
 Step 1: git add . && git commit -m "Initial commit"
 Step 2: git push origin master
-Step 3: git push heroku masterhet
+Step 3: git push heroku master

@@ -21,6 +21,10 @@ client.on('message', message => {
 
     if(!userData[message.author.id]) userData[message.author.id] = {
         realName: message.author.username,
+        Viridian: false,
+        market: {
+            itemsCreated: 0
+        },
         coins: 0,
         customJob: false,
         jobInfo: {

@@ -21,8 +21,9 @@ exports.run = (client, message, args, ops, eEmb) => {
                 });
                 
                 var emb = new Discord.RichEmbed()
-                .setAuthor("Alfie Commands")
+                .setAuthor("Viribus Commands")
                 .setDescription(itemsFile)
+                .setColor(ops.embColor)
                 .setFooter(Date())
                 message.author.send(emb)
             });

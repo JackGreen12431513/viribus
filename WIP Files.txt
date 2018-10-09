@@ -1,0 +1,8 @@
+These are the highly "deadly" files,.that will cause an error code when used
+(NOTE: NOT ALL OF THE COMMANDS IN THE DIRECTORYS CAUSE AN ERROR EMBED TO BE SENT!)
+
+./Commands/Subcommands/Market
+./Commands/Subcommands/Work
+./Commands/lb.js
+
+
