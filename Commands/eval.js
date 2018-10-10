@@ -1,11 +1,11 @@
 const discord = require('discord.js')
 
-exports.run = (client, message, args, ops, eEmb, userData) => {
+exports.run = (client, message, args, ops, eEmb, userData, write) => {
         if(message.author.id !== ops.ownerID) return message.channel.send("🚫 Sorry, you can not use this command!")
     
         try {
             try {
-              const code = args[0];
+              const code = message.content.replace("vir!eval", "");
               let evaled = eval(code);
             
               if (typeof evaled !== "string")
