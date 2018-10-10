@@ -1,11 +1,11 @@
-const Discord = require('discord.js')
+const discord = require('discord.js')
 
 exports.run = (client, message, args, ops, eEmb, userData) => {
         if(message.author.id !== ops.ownerID) return message.channel.send("🚫 Sorry, you can not use this command!")
     
         try {
             try {
-              const code = message.content.replace(prefix + "eval", "").replace(" ", "");
+              const code = args[0];
               let evaled = eval(code);
             
               if (typeof evaled !== "string")
@@ -13,7 +13,7 @@ exports.run = (client, message, args, ops, eEmb, userData) => {
             
               //message.channel.send(clean(evaled), {code:"xl"});
               var embed = new discord.RichEmbed()
-              .setColor(embColor)
+              .setColor(ops.embColor)
               .setTitle("Viribus Eval!")
               .addField('Input:', `\`\`\`js\n${code}\`\`\``)
               .addField('Output:', `\`\`\`js\n${clean(evaled)}\`\`\``)
