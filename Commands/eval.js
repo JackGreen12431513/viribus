@@ -4,7 +4,6 @@ exports.run = (client, message, args, ops, eEmb, userData) => {
         if(message.author.id !== ops.ownerID) return message.channel.send("🚫 Sorry, you can not use this command!")
     
         try {
-            if(message.author.id !== config.OwnerID) return;
             try {
               const code = message.content.replace(prefix + "eval", "").replace(" ", "");
               let evaled = eval(code);

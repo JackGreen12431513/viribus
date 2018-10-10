@@ -1,7 +1,6 @@
 const Discord = require('discord.js')
 
 exports.run = (client, message, args, ops, eEmb, userData) => {
-        if(message.author.id !== ops.ownerID) return message.channel.send("🚫 Sorry, you can not use this command!")
     
         try {
             if(!message.mentions.members.first()) {
