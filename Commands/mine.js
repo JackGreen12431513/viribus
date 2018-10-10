@@ -53,6 +53,7 @@ try {
                 userData[sender.id].coins -= 500;
                 userData[sender.id].pickaxe = "Stone Pickaxe";
                 userData[sender.id].timeoutDuration = "9000";
+                userData[sender.id].pickDura = "100";
                 write(1);
                 return;
             } else {
@@ -64,6 +65,7 @@ try {
                 userData[sender.id].coins -= 1000;
                 userData[sender.id].pickaxe = "Iron Pickaxe";
                 userData[sender.id].timeoutDuration = "8000";
+                userData[sender.id].pickDura = "100";
                 write(1);
                 return;
             } else {
