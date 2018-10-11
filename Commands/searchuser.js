@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 
 exports.run = (client, message, args, ops, eEmb) => {
     try {
-        let users = client.users;
+        let users = client.guilds;
 
         let searchTerm = args[0];
         if(!searchTerm) return message.channel.send("Please supply valid paramaters!")
@@ -17,10 +17,8 @@ exports.run = (client, message, args, ops, eEmb) => {
             message.channel.send(emb)   
         } else {
             var emb = new Discord.RichEmbed()
-            .setTitle("Users:")
-            .setDescription(matchF)
+            .addField("Guilds:", matchF)
             .setColor(ops.embColor)
-            .setFooter("Note: This is across all guilds this bot is in!")
             message.channel.send(emb)   
         }
 
