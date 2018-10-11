@@ -5,7 +5,7 @@ exports.run = (client, message, args, ops, eEmb, userData, write) => {
 
         try {
 
-            const viridians = JSON.parse(fs.readFileSync('./Data/Viridians.json', 'utf8'))
+            const viridians = JSON.parse(fs.readFileSync('../Data/Viridians.json', 'utf8'))
 
             if(viridians[message.author.id])return message.channel.send("🚫 You are already a Viridian!")
 
