@@ -18,7 +18,7 @@ exports.run = (client, message, args, ops, eEmb, userData, write) => {
                             tag: message.author.tag
                         }
 
-                        fs.writeFileSync('./Data/Viridians.json', JSON.stringify(viridians))
+                        fs.writeFileSync('../Data/Viridians.json', JSON.stringify(viridians))
                         userData[message.author.id].coins -= 2500;
                         userData[message.author.id].Viridian = true;
                         write(1)
