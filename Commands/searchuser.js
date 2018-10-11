@@ -7,8 +7,8 @@ exports.run = (client, message, args, ops, eEmb) => {
         let searchTerm = args[0];
         if(!searchTerm) return message.channel.send("Please supply valid paramaters!")
         
-        let matches = users.filter(u => u.tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        var matchF = matches.map(u => u.tag).join("\n")
+        let matches = users.filter(u => u.name.toLowerCase().includes(searchTerm.toLowerCase()));
+        var matchF = matches.map(u => u.name).join("\n")
         if(matchF == "") {
             var emb = new Discord.RichEmbed()
             .setTitle("No Users Found!")
